@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global tweaks */
+:root {
+  color-scheme: light dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply font-sans text-ink-800 bg-gradient-to-b from-white via-brand-50 to-white;
+}
+
+.container-prose {
+  @apply prose prose-zinc max-w-none;
+}
+
+/* Subtle fancy underline link */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, theme('colors.brand.400'), theme('colors.accent.400'));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+.link-underline:hover::after { transform: scaleX(1); }
+
+/* Print styles for CV */
+@media print {
+  nav, footer, .no-print { display: none !important; }
+  main { padding: 0 !important; }
+}
+
+
