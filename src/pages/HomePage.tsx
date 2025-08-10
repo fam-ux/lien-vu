@@ -10,7 +10,6 @@ export default function HomePage() {
         name="Lien Vu"
         title="Ph.D. Candidate, Educational Statistics & Research Methods, University of Delaware"
         subtitle="Research on STEM learning, educational neuroscience, and program evaluation"
-        imageUrl="/headshot.jpg"
       />
 
       <section className="grid md:grid-cols-3 gap-6">
