@@ -8,7 +8,9 @@ type HeroProps = {
 }
 
 export default function Hero({ name, title, subtitle, imageUrl }: HeroProps) {
-  const [imgSrc, setImgSrc] = useState<string>(imageUrl ?? '/profile.JPG')
+  const baseUrl = import.meta.env.BASE_URL
+  const defaultImg = `${baseUrl}profile.JPG`
+  const [imgSrc, setImgSrc] = useState<string>(imageUrl ?? defaultImg)
   return (
     <section className="relative overflow-hidden grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 items-center">
       <div className="absolute inset-0 -z-10 pointer-events-none">
@@ -27,7 +29,7 @@ export default function Hero({ name, title, subtitle, imageUrl }: HeroProps) {
           src={imgSrc}
           alt={`${name} headshot`}
           className="w-44 h-44 sm:w-52 sm:h-52 rounded-full object-cover ring-4 ring-brand-100 shadow-lg shadow-brand-100/50 transition-transform duration-300 hover:scale-[1.02]"
-          onError={() => setImgSrc('/profile.JPG')}
+          onError={() => setImgSrc(defaultImg)}
         />
       </div>
     </section>
