@@ -15,6 +15,7 @@ const presentations = [
 
 export default function PresentationsPage() {
   usePageTitle('Presentations — Dr. Lien Vu')
+  const baseUrl = import.meta.env.BASE_URL
   return (
     <div className="space-y-8">
       <section className="rounded-xl p-5 bg-white ring-1 ring-brand-100 shadow-sm">
@@ -23,9 +24,9 @@ export default function PresentationsPage() {
           In partnership with the University of Delaware, this research studied how children in Kumon’s reading and math programs develop a love for reading. Using surveys and achievement data from thousands of students, the team found that strong learning attitudes, academic engagement, and consistent practice were linked to greater reading enjoyment. These insights help Kumon and similar programs create learning experiences that foster both skills and a lifelong love of reading.
         </p>
         <div className="mt-3">
-          <a
+            <a
             className="inline-flex items-center gap-2 text-brand-700 font-medium hover:gap-3 transition-all"
-            href="/posters/kumon-lets-read-for-fun.pdf"
+            href={`${baseUrl}posters/kumon-lets-read-for-fun.pdf`}
             target="_blank"
             rel="noreferrer"
           >

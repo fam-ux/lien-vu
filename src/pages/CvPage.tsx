@@ -21,7 +21,7 @@ export default function CvPage() {
         <h1 className="text-2xl font-semibold">Lien Vu</h1>
         <div className="text-gray-700">Ph.D. Candidate, Educational Statistics & Research Methods</div>
         <div className="text-sm text-gray-600">University of Delaware</div>
-        <div className="mt-2 text-sm text-gray-700">101 Anthony Court, North Wales, PA 19454 • 215-237-7331 • lienvu@udel.edu</div>
+        <div className="mt-2 text-sm text-gray-700">North Wales, PA 19454 • 215-237-7331 • lienvu@udel.edu</div>
       </header>
 
       <section>
