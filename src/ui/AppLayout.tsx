@@ -8,7 +8,7 @@ export default function AppLayout() {
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <NavLink to="/" className="text-lg sm:text-xl font-semibold tracking-tight link-underline">
-            Dr. Lien Vu
+            Lien Vu
           </NavLink>
           <nav className="hidden md:flex gap-6 text-sm">
             <NavLink to="/research" className={({isActive})=> `hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`}>Research</NavLink>
