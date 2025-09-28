@@ -3,7 +3,7 @@ import usePageTitle from '../ui/usePageTitle'
 import { Link } from 'react-router-dom'
 
 export default function HomePage() {
-  usePageTitle('Dr. Lien Vu — Educational Statistics & Research Methods')
+  usePageTitle('Lien Vu — Educational Statistics & Research Methods')
   return (
     <div className="space-y-12">
       <Hero
